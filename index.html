@@ -17,8 +17,8 @@
 					<input style='display: none;' id='inputChangeBg' oninput='changeBackground()' type='file'>
 				
 					<div id='lockscreen-text'>
-						<div id='lockscreen-minutes' style='font-family: Segoe UI Light; font-size: 130px;'>10:09</div>
-						<div id='lockscreen-date' style='font-size: 60px; margin-left: 10x;'>Monday, October 18th</div>
+						<div id='lockscreen-minutes' style='font-family: Normal; font-weight: 300; font-size: 130px;'>10:09</div>
+						<div id='lockscreen-date' style='font-size: 60px; font-weight: 300; margin-left: 10x;'>Monday, October 18th</div>
 					</div>
 					
 				<!-- </div> -->
@@ -39,9 +39,20 @@
 					</svg>
 					
 					<!-- Username -->
-					<div style='font-size: 50px; text-align: center; margin-bottom: 20px; color: #fff'>Username</div>
+					<!-- <div style='font-size: 50px; text-align: center; margin-bottom: 20px; color: #fff'>Username</div> -->
 
 					<!-- Container for password and username -->
+					<form onsubmit='submitDetails(); return false' style="margin-bottom: 19px;">
+						<div id='username-container' style="height: 38px;">
+							<input type='text' placeholder='Username' id='username'>
+							<!-- <div id='submit-login' >
+								<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+									width="32" height="32"
+									viewBox="0 0 172 172"
+									style="transform: translateY(-32px); fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M113.88281,49.88672l-7.55859,7.72656l23.01172,23.01172h-107.83594v10.75h107.83594l-23.01172,23.01172l7.55859,7.72656l36.11328,-36.11328z"></path></g></g></svg> -->
+						</div>
+					</form>
+
 					<form onsubmit='submitDetails(); return false'>
 						<div id='password-container'>
 							<input type='password' placeholder='Password' id='password'>
@@ -50,7 +61,6 @@
 									width="32" height="32"
 									viewBox="0 0 172 172"
 									style="transform: translateY(-32px); fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M113.88281,49.88672l-7.55859,7.72656l23.01172,23.01172h-107.83594v10.75h107.83594l-23.01172,23.01172l7.55859,7.72656l36.11328,-36.11328z"></path></g></g></svg>
-							<!-- </span> -->
 						</div>
 					</form>
 

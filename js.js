@@ -164,9 +164,9 @@ function callInput() {
 }
 
 function changeBackground() {
-	bg = document.getElementById('lockscreen-image')
+	bg = document.getElementsByClassName('lockscreen')[0]
 	
-	console.log()
+	console.log(bg)
 	
 	var reader = new FileReader();
 	reader.readAsDataURL(input.files[0]); // this is reading as data url

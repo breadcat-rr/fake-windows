@@ -4,13 +4,25 @@ html, body {
     margin: 0;
 }
 
+@font-face {
+    font-family: 'Normal';
+    src: url('assets/font/segoeui.ttf');
+}
+@font-face {
+    font-family: 'Normal';
+    src: url('assets/font/segoeuisl.ttf');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Normal';
+    src: url('assets/font/segoeuil.ttf');
+    font-weight: 300;
+}
+
 * {
     overflow: hidden;
     user-select: none;
 }
-
-
-
 
 #lockscreen-text {
     color: #fff;
@@ -103,7 +115,8 @@ html, body {
 
 #login-container {
     opacity: 0;
-    font-family: 'Segoe UI Semilight';
+    font-family: 'Normal';
+    font-weight: 400;
     font-size: 60px;
     
     position:absolute;
@@ -117,25 +130,24 @@ html, body {
 }
 
 #user-icon {
-    /* display: flex;
-    align-content: center; */
+
     padding-top: 20px;
     scale: 1.5;
     display: table;
     margin: 0 auto;
     margin-bottom: 10px;
-    margin-bottom: 48px;
-    /* position:absolute; */
-    /* left: 50vw;
-    top: 50vh;
-    transform: translate(-50%,-50%); */
+    margin-bottom: 70px;
+
 }
 
 .translate-icon {
     transform: translate(-100%,-100%);
 }
+#username-container {
+    height: 34px;
+}
 
-#password-container {
+#password-container, #username-container {
     display:flex;
     flex-direction: row;
     justify-content: center;
@@ -149,7 +161,6 @@ html, body {
 	height: 34px;
 	margin-left: -36px;
 	background: #555;
-	/* margin-top: 2px; */
 
     border-color: rgb(104, 104, 104);
     border-width: 2px;
@@ -172,11 +183,13 @@ html, body {
     /* background: rgba(7, 7, 7, 0.37) !important; */
 }
 
+
 input {
     pointer-events: all;
     
     font-size: 16px;
-    font-family: 'Segoe UI Semilight';
+    font-family: 'Normal';
+    font-weight: 400;
     
     padding-left: 7px;
     padding-bottom: 2px;
