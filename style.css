@@ -169,7 +169,7 @@ html, body {
 }
 
 #submit-login:hover {
-    border-color: rgb(214, 214, 214);
+    border-color: #fff;
     /* background: rgba(7, 7, 7, 0.37); */
 }
 #submit-login:active {
@@ -178,11 +178,32 @@ html, body {
     /* background: rgba(7, 7, 7, 0.37); */
 }
 
-.forceHover {
-    border-color: rgb(214, 214, 214) !important;
-    /* background: rgba(7, 7, 7, 0.37) !important; */
+#show-password {
+    width: 32px;
+    height: 32px;
+    z-index: 200;
+    margin-left: -32px;
+    position: relative;
+    left: -38px;
+    scale: 0.66;
+    top: 2px;
+    pointer-events: all;
 }
 
+#show-password:active > svg * {
+    stroke: rgb(0, 204, 255);
+    /* background:rgb(0, 204, 255) */
+}
+
+.show-password-svg {
+    stroke: black;
+    stroke-width: 5;
+}
+.hide {
+    display: none !important;
+    /* stroke: rgba;
+    stroke-width: 5; */
+}
 
 input {
     pointer-events: all;
@@ -194,7 +215,7 @@ input {
     padding-left: 7px;
     padding-bottom: 2px;
     
-    color: rgb(168, 168, 168);
+    color: rgb(173, 173, 173);
     
     width: 270px;
     background-color: rgba(8, 8, 8, 0.5);
@@ -202,16 +223,25 @@ input {
     border-color: rgb(104, 104, 104);
     border-width: 2px;
     border-style: solid;
+}
 
-    /* transition-property: backgroundColor, borderColor, color;
-    transition-duration: 100ms; */
+input::placeholder {
+    color: rgb(196, 196, 196)
 }
 
 input:hover {
     border-color: rgb(255, 255, 255) !important;
-    /* border-color: rgb(214, 214, 214); */
     background-color: rgba(7, 7, 7, 0.37);
 }
+
+.forceHover {
+    border-color: #fff !important;
+}
+
+.forceFocus {
+    border-color: rgb(159, 159, 159);
+}
+
 
 input:focus {
     outline: none;

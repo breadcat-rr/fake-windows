@@ -179,7 +179,7 @@ function changeBackground() {
 }
 
 
-
+// on hover, show white border around submit button
 submitButton.onmouseenter = function() {
 	passInput.classList.add('forceHover')
 }
@@ -187,35 +187,65 @@ submitButton.onmouseleave = function() {
 	passInput.classList.remove('forceHover')
 }
 
+// when input is in focus, add outline to submit button
 passInput.onfocus = function() {
 	submitButton.classList.add('forceHover')
+
+	if ($('#password')[0].value == '') {
+		$('#show-password')[0].classList.add('hide')
+	} else {
+		$('#show-password')[0].classList.remove('hide')
+	}
 }
 
 passInput.addEventListener('focusout', function() {
-	submitButton.classList.remove('forceHover')
+	// submitButton.classList.remove('forceHover')
+	// console.log(document.activeElement)
+
+	// setTimeout(function() {
+	// 	console.log(document.activeElement)
+
+	// },200)
+	// if (document.activeElement != $('#show-password')[0]) {
+	// 	$('#show-password')[0].classList.add('hide')
+	// }
 })
 
+// when input is hovered, add outline to submit button
 passInput.onmouseenter = function() {
 	submitButton.classList.add('forceHover')
 }
 passInput.onmouseleave = function() {
 	if (passInput != document.activeElement) {
 		submitButton.classList.remove('forceHover')
+	} else {
+		submitButton.classList.remove('forceHover')
+		submitButton.classList.remove('forceFocus')
 	}
 }
 
+$('#password')[0].addEventListener('input', function () {
+	if ($('#password')[0].value == '') {
+		$('#show-password')[0].classList.add('hide')
+	} else {
+		$('#show-password')[0].classList.remove('hide')
+	}
+})
+$('#show-password')[0].addEventListener('mousedown', function () {
+	// if (document.activeElement == $('#password')[0]) {
+	// passInput.classList.add('forceFocus')
+	passInput.style.backgroundColor = '#fff';
+	passInput.style.color = '#313131';
+	passInput.style.borderColor = '#9f9f9f';
+})
 
-// function elementFocus(element) {
-// 	element.classList.add('forceHover')
-// 	console.log('hi')
-// }
-// function elementLostFocus(element) {
-// 	element.classList.remove('forceHover')
-// }
+$('#show-password')[0].addEventListener('mouseup', function () {
+	passInput.focus()
 
-// function inputGainedFocus(element) {
-	
-// }
+	passInput.style.backgroundColor = '';
+	passInput.style.color = '';
+	passInput.style.borderColor = '';
+})
 
 function submitDetails() {
 	console.log('NAAH')

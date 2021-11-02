@@ -3,6 +3,7 @@
 	<link rel="stylesheet" href="style.css">
     
 <head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<title>Windows 10</title>
 </head>
 	<body>
@@ -18,7 +19,7 @@
 				
 					<div id='lockscreen-text'>
 						<div id='lockscreen-minutes' style='font-family: Normal; font-weight: 300; font-size: 130px;'>10:09</div>
-						<div id='lockscreen-date' style='font-size: 60px; font-weight: 300; margin-left: 10x;'>Monday, October 18th</div>
+						<div id='lockscreen-date' style='font-family: Normal; font-size: 60px; font-weight: 300; margin-left: 10x;'>Monday, October 18th</div>
 					</div>
 					
 				<!-- </div> -->
@@ -41,7 +42,7 @@
 					<!-- Username -->
 					<!-- <div style='font-size: 50px; text-align: center; margin-bottom: 20px; color: #fff'>Username</div> -->
 
-					<!-- Container for password and username -->
+					<!-- username -->
 					<form onsubmit='submitDetails(); return false' style="margin-bottom: 19px;">
 						<div id='username-container' style="height: 38px;">
 							<input type='text' placeholder='Username' id='username'>
@@ -52,10 +53,21 @@
 									style="transform: translateY(-32px); fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M113.88281,49.88672l-7.55859,7.72656l23.01172,23.01172h-107.83594v10.75h107.83594l-23.01172,23.01172l7.55859,7.72656l36.11328,-36.11328z"></path></g></g></svg> -->
 						</div>
 					</form>
-
+					
+					<!-- password -->
 					<form onsubmit='submitDetails(); return false'>
 						<div id='password-container'>
 							<input type='password' placeholder='Password' id='password'>
+							
+							<div id='show-password' >
+								<svg style='scale: 0.25; transform: translate(-155%,-139%);'width="128" height="128" xmlns="http://www.w3.org/2000/svg">
+									<g>
+									 <ellipse stroke-width="3" ry="20.625" class='show-password-svg' rx="20.625" id="showpass-svg" cy="64" cx="64" stroke="#fff" fill="none"/>
+									 <path stroke-width="3" class='show-password-svg' id="showpass-svg-2" d="m18.36736,60.69881c5.94118,-21.8911 24.93208,-36.22005 45.63264,-36.32653c20.70056,-0.10647 41.65705,16.18445 45.63264,36.32653" opacity="undefined" stroke="#fff" fill="none"/>
+									</g>
+								   </svg>
+							</div>
+
 							<div id='submit-login' >
 								<!-- <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 									width="32" height="32"
