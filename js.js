@@ -199,13 +199,8 @@ passInput.onfocus = function() {
 }
 
 passInput.addEventListener('focusout', function() {
-	// submitButton.classList.remove('forceHover')
-	// console.log(document.activeElement)
+	submitButton.classList.remove('forceHover')
 
-	// setTimeout(function() {
-	// 	console.log(document.activeElement)
-
-	// },200)
 	// if (document.activeElement != $('#show-password')[0]) {
 	// 	$('#show-password')[0].classList.add('hide')
 	// }
@@ -224,6 +219,21 @@ passInput.onmouseleave = function() {
 	}
 }
 
+$('#show-password')[0].onmouseenter = function() {
+	submitButton.classList.add('forceHover')
+	passInput.classList.add('forceHover')
+}
+$('#show-password')[0].onmouseleave = function() {
+	submitButton.classList.remove('forceHover')
+	passInput.classList.remove('forceHover')
+	// if (passInput != document.activeElement) {
+	// 	submitButton.classList.remove('forceHover')
+	// } else {
+	// 	submitButton.classList.remove('forceHover')
+	// 	submitButton.classList.remove('forceFocus')
+	// }
+}
+
 $('#password')[0].addEventListener('input', function () {
 	if ($('#password')[0].value == '') {
 		$('#show-password')[0].classList.add('hide')
@@ -232,15 +242,20 @@ $('#password')[0].addEventListener('input', function () {
 	}
 })
 $('#show-password')[0].addEventListener('mousedown', function () {
-	// if (document.activeElement == $('#password')[0]) {
-	// passInput.classList.add('forceFocus')
 	passInput.style.backgroundColor = '#fff';
 	passInput.style.color = '#313131';
 	passInput.style.borderColor = '#9f9f9f';
+
+	submitButton.classList.add('forceHover')
+	
+
+	passInput.type = 'text'
 })
 
 $('#show-password')[0].addEventListener('mouseup', function () {
 	passInput.focus()
+	passInput.type = 'password'
+	
 
 	passInput.style.backgroundColor = '';
 	passInput.style.color = '';

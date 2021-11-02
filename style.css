@@ -207,7 +207,7 @@ html, body {
 
 input {
     pointer-events: all;
-    
+    user-select: all;
     font-size: 16px;
     font-family: 'Normal';
     font-weight: 400;
