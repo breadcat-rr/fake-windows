@@ -26,7 +26,8 @@ html, body {
 
 #lockscreen-text {
     color: #fff;
-    font-family: 'Segoe UI Semilight';
+    font-family: 'Normal';
+    font-weight: 400;
     font-size: 60px;
 }
 
@@ -159,7 +160,7 @@ html, body {
     z-index: 100;
 	width: 34px;
 	height: 34px;
-	margin-left: -36px;
+	margin-left: -34px;
 	background: #555;
 
     border-color: rgb(104, 104, 104);
@@ -179,20 +180,25 @@ html, body {
 }
 
 #show-password {
-    width: 32px;
-    height: 32px;
+    width: 34px;
+    height: 34px;
     z-index: 200;
-    margin-left: -32px;
+    margin-left: -35px;
     position: relative;
-    left: -38px;
-    scale: 0.66;
+    left: -34px;
     top: 2px;
     pointer-events: all;
 }
 
-#show-password:active > svg * {
+
+#show-password:hover > svg * {
     stroke: rgb(0, 204, 255);
     /* background:rgb(0, 204, 255) */
+}
+
+#show-password:active, #show-password:active > svg * {
+    stroke: rgb(255, 255, 255);
+    background:rgb(0, 136, 214)
 }
 
 .show-password-svg {
@@ -201,8 +207,6 @@ html, body {
 }
 .hide {
     display: none !important;
-    /* stroke: rgba;
-    stroke-width: 5; */
 }
 
 input {
