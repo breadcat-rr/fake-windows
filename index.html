@@ -43,14 +43,14 @@
 					<div style='font-size: 45px; font-family: Normal; font-weight: 400; text-align: center; margin-bottom: 20px; color: #fff'>Other User</div>
 
 					<!-- username -->
-					<form onsubmit='submitDetails(); return false' style="margin-bottom: 19px;">
+					<form onsubmit='submitDetails(); return false' style="margin-bottom: 19px;" class='vanish-on-load'>
 						<div id='username-container' style="height: 38px;">
 							<input type='text' placeholder='Username' id='username'>
 						</div>
 					</form>
 					
 					<!-- password -->
-					<form onsubmit='submitDetails(); return false'>
+					<form onsubmit='submitDetails(); return false' class='vanish-on-load'>
 						<div id='password-container'>
 							<input type='password' placeholder='Password' id='password'>
 							
@@ -81,10 +81,12 @@
 					
 
 				</div>
-				<div style='font-size: 15px; font-family: Normal; font-weight: 400; color: #fff; text-align: center; margin-top: 20px;'>Sign in to: BALLARATHS</div>
-				<div class='clickable-text' style='font-size: 15px; margin-top: 20px;'>How do I sign in to another domain?</div>
+				<div class='vanish-on-load' style='font-size: 15px; font-family: Normal; font-weight: 400; color: #fff; text-align: center; margin-top: 20px;'>Sign in to: BALLARATHS</div>
+				<div class='vanish-on-load clickable-text' style='font-size: 15px; margin-top: 20px;'>How do I sign in to another domain?</div>
 	
-				
+				<div style='font-size: 30px; text-align: center; color: #fff; font-family: Normal; font-weight: 400;'id='loading-icon'>
+					Loading
+				</div>
 				
 				
 			</div>

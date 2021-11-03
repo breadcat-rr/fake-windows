@@ -23,6 +23,37 @@ Number.prototype.map = function (in_min, in_max, out_min, out_max) {
 	return (this - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
   }
 
+var loadingFunc
+
+function attemptLogin() {
+	$('.vanish-on-load').each(function(index,elem) {
+		elem.style.display = 'none'
+	})
+	let number = 0
+	
+
+	$('#loading-icon')[0].style.display = 'block'
+	loadingFunc = setInterval(function() {
+		let num = new Date()
+		number += 1
+		$('#loading-icon')[0].innerHTML = 'Loading' + '.'.repeat(number%4)
+	}, 200)
+
+	var randomTimeout = Math.floor((Math.random() * 5000) + 3000)
+	console.log(randomTimeout)
+
+	setTimeout(function() {
+		clearInterval(loadingFunc)
+
+		$('.vanish-on-load').each(function(index,elem) {
+			elem.style.display = ''
+		})
+
+		$('#loading-icon')[0].style.display = 'none'
+
+	}, randomTimeout)
+}
+
 function openLogin() {
 	passInput.value = ''
 	
@@ -43,8 +74,8 @@ function openLogin() {
 	loginPrompt.style.opacity = 1;
 
 	setTimeout(function() {
-		passInput.focus()
-		passInput.value = ''
+		$('#username')[0].focus()
+		$('#username')[0].value = ''
 	},100)
 
 	setTimeout(function() {
@@ -101,6 +132,9 @@ document.onmousedown = function (e) {
 //return to normal
 document.onmouseup = function (e) {
 	if (lockscreenActive) {
+		if ((mouseStart-mousePos) < 10) {
+			openLogin()
+		}
 		mouseDown = false
 		mouseStart = e.clientY
 		
@@ -110,6 +144,12 @@ document.onmouseup = function (e) {
 		} else {
 			exitLogin()
 		}
+	}
+}
+
+document.onkeydown = function (e) {
+	if (lockscreenActive) {
+		openLogin()
 	}
 }
 
@@ -265,6 +305,7 @@ $('#show-password')[0].addEventListener('mouseup', function () {
 function submitDetails() {
 	if ($('#username')[0].value != '' && $('#password')[0].value != '') {
 		console.log('something')
+		attemptLogin()
 	} else {
 		console.log('nothing')
 	}

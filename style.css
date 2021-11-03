@@ -275,3 +275,7 @@ input:focus::-moz-placeholder {
     color: rgb(153, 218, 255) !important;
 }
 
+#loading-icon {
+    display: none;
+}
+
