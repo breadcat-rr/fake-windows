@@ -133,12 +133,11 @@ html, body {
 
 #user-icon {
     padding-top: 20px;
-    scale: 1.5;
     display: table;
     margin: 0 auto;
     margin-bottom: 10px;
     margin-bottom: 70px;
-
+    transform: scale(1.5);
 }
 
 .translate-icon {
