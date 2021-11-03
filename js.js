@@ -43,8 +43,7 @@ function openLogin() {
 	loginPrompt.style.opacity = 1;
 
 	setTimeout(function() {
-		passInput.focus()
-		passInput.value = ''
+		$('#username')[0].focus()
 	},100)
 
 	setTimeout(function() {
