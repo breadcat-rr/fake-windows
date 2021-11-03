@@ -37,13 +37,14 @@ function openLogin() {
 	lockscreen.classList.add('lockscreen-animate')
 	lockscreen.style.bottom = '100vh';
 	lockscreen.style.opacity = '0';
-	background.style.filter = 'brightness(60%)'
+	background.style.filter = 'brightness(60%) blur(10px)'
 	background.style.transform = 'scale(1.07)'
 
 	loginPrompt.style.opacity = 1;
 
 	setTimeout(function() {
-		$('#username')[0].focus()
+		passInput.focus()
+		passInput.value = ''
 	},100)
 
 	setTimeout(function() {
@@ -150,7 +151,11 @@ function updateTime() {
 		else { var minutes = time.getMinutes() } 
 
 		if (element.id == 'lockscreen-minutes') {
-			element.innerHTML =  time.getHours() % 12 + ':' + minutes
+			let hours = time.getHours()
+			if (( hours % 12) == 0) {	hours = 12} 
+			else {hours = hours % 12}
+	
+			element.innerHTML =  hours + ':' + minutes
 		} else {
 			element.innerHTML = time.toLocaleDateString('default', { weekday: 'long' })   + ', ' + time.toLocaleString('default', { month: 'long' }) + ' ' + getOrdinalNum(time.getDate())
 		}
@@ -258,5 +263,10 @@ $('#show-password')[0].addEventListener('mouseup', function () {
 })
 
 function submitDetails() {
-	console.log('NAAH')
+	if ($('#username')[0].value != '' && $('#password')[0].value != '') {
+		console.log('something')
+	} else {
+		console.log('nothing')
+	}
 }
+

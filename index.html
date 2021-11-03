@@ -14,7 +14,7 @@
 						<svg id='change-background-icon' xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 						width="32" height="32"
 						viewBox="0 0 172 172"
-						style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"  stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#e6e6e6"><path d="M21.5,21.5v129h129v-129zM32.25,32.25h107.5v86h-107.5zM43,43v26.875h26.875v-26.875zM53.75,53.75h5.375v5.375h-5.375zM43,80.625v26.875h26.875v-26.875zM53.75,91.375h5.375v5.375h-5.375zM32.25,129h107.5v10.75h-107.5z"></path></g></g></svg></button>
+						style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"  stroke-dashoffset="0" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#e6e6e6"><path d="M21.5,21.5v129h129v-129zM32.25,32.25h107.5v86h-107.5zM43,43v26.875h26.875v-26.875zM53.75,53.75h5.375v5.375h-5.375zM43,80.625v26.875h26.875v-26.875zM53.75,91.375h5.375v5.375h-5.375zM32.25,129h107.5v10.75h-107.5z"></path></g></g></svg></button>
 					<input style='display: none;' id='inputChangeBg' oninput='changeBackground()' type='file'>
 				
 					<div id='lockscreen-text'>
@@ -33,29 +33,29 @@
 					<!-- User icon -->
 					<svg id='user-icon' width="167px" height="167px" xmlns="http://www.w3.org/2000/svg">
 						<g>
-							<path id="cicle" d="m83.5,156.80069c-38.56392,0 -69.8007,-31.23678 -69.8007,-69.8007c0,-38.56392 31.23678,-69.8007 69.8007,-69.8007c38.56392,0 69.8007,31.23678 69.8007,69.8007c0,38.56392 -31.23678,69.8007 -69.8007,69.8007z"  stroke-width="5" fill="#fff4" stroke="none"/>
-							<path id="svg_1" d="m49.95537,125.8095c0,-18.97759 15.37185,-34.34943 34.34943,-34.34943c18.97759,0 34.34943,15.37185 34.34943,34.34943" stroke-width="5" fill="none" stroke="white"/>
-							<path id="svg_2" d="m83.65298,89.54451c-12.95702,0 -23.4522,-10.49519 -23.4522,-23.4522c0,-12.95702 10.49519,-23.4522 23.4522,-23.4522c12.95702,0 23.4522,10.49519 23.4522,23.4522c0,12.95702 -10.49519,23.4522 -23.4522,23.4522z" stroke-width="5" fill="none" stroke="white"/>
+							<path id="cicle" d="m83.5,156.80069c-38.56392,0 -69.8007,-31.23678 -69.8007,-69.8007c0,-38.56392 31.23678,-69.8007 69.8007,-69.8007c38.56392,0 69.8007,31.23678 69.8007,69.8007c0,38.56392 -31.23678,69.8007 -69.8007,69.8007z"  stroke-width="5" fill="#fff7" stroke="none"/>
+							<path id="svg_1" d="m49.95537,125.8095c0,-18.97759 15.37185,-34.34943 34.34943,-34.34943c18.97759,0 34.34943,15.37185 34.34943,34.34943" stroke-width="5" fill="none" stroke="#444"/>
+							<path id="svg_2" d="m83.65298,89.54451c-12.95702,0 -23.4522,-10.49519 -23.4522,-23.4522c0,-12.95702 10.49519,-23.4522 23.4522,-23.4522c12.95702,0 23.4522,10.49519 23.4522,23.4522c0,12.95702 -10.49519,23.4522 -23.4522,23.4522z" stroke-width="5" fill="none" stroke="#444"/>
 						</g>
 					</svg>
 					
 					<!-- Username -->
-					<!-- <div style='font-size: 50px; text-align: center; margin-bottom: 20px; color: #fff'>Username</div> -->
+					<div style='font-size: 45px; font-family: Normal; font-weight: 400; text-align: center; margin-bottom: 20px; color: #fff'>Other User</div>
 
 					<!-- username -->
 					<form onsubmit='submitDetails(); return false' style="margin-bottom: 19px;">
 						<div id='username-container' style="height: 38px;">
-							<input type='text' placeholder='Username' id='username' autocomplete='off'>
+							<input type='text' placeholder='Username' id='username'>
 						</div>
 					</form>
 					
 					<!-- password -->
-					<form onsubmit='submitDetails(); return false' >
+					<form onsubmit='submitDetails(); return false'>
 						<div id='password-container'>
-							<input type='password' placeholder='Password' id='password' autocomplete='off'>
+							<input type='password' placeholder='Password' id='password'>
 							
 							<div id='show-password' >
-								<svg style='transform: scale(0.18) translate(-208%,-196%);'width="128" height="128" xmlns="http://www.w3.org/2000/svg">
+								<svg style='scale: 0.18; transform: translate(-218%,-196%);'width="128" height="128" xmlns="http://www.w3.org/2000/svg">
 									<g>
 									 <ellipse stroke-width="3" ry="20.625" class='show-password-svg' rx="20.625" id="showpass-svg" cy="64" cx="64" stroke="#fff" fill="none"/>
 									 <path stroke-width="3" class='show-password-svg' id="showpass-svg-2" d="m18.36736,60.69881c5.94118,-21.8911 24.93208,-36.22005 45.63264,-36.32653c20.70056,-0.10647 41.65705,16.18445 45.63264,36.32653"  stroke="#fff" fill="none"/>
@@ -78,9 +78,12 @@
 									   </svg>
 								</div>
 					</form>
+					
 
 				</div>
-
+				<div style='font-size: 15px; font-family: Normal; font-weight: 400; color: #fff; text-align: center; margin-top: 20px;'>Sign in to: BALLARATHS</div>
+				<div class='clickable-text' style='font-size: 15px; margin-top: 20px;'>How do I sign in to another domain?</div>
+	
 				
 				
 				
