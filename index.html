@@ -55,7 +55,7 @@
 							<input type='password' autocomplete="off" placeholder='Password' id='password'>
 							
 							<div id='show-password' >
-								<svg style='scale: 0.18; transform: translate(-218%,-196%);'width="128" height="128" xmlns="http://www.w3.org/2000/svg">
+								<svg style='scale: 0.18; transform: translate(-204%,-196%);'width="128" height="128" xmlns="http://www.w3.org/2000/svg">
 									<g>
 									 <ellipse stroke-width="3" ry="20.625" class='show-password-svg' rx="20.625" id="showpass-svg" cy="64" cx="64" stroke="#fff" fill="none"/>
 									 <path stroke-width="3" class='show-password-svg' id="showpass-svg-2" d="m18.36736,60.69881c5.94118,-21.8911 24.93208,-36.22005 45.63264,-36.32653c20.70056,-0.10647 41.65705,16.18445 45.63264,36.32653"  stroke="#fff" fill="none"/>
@@ -63,7 +63,7 @@
 								   </svg>
 							</div>
 
-							<div id='submit-login' >
+							<div id='submit-login' onclick='attemptLogin()'>
 								<!-- <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 									width="32" height="32"
 									viewBox="0 0 172 172"
@@ -83,12 +83,18 @@
 				</div>
 				<div class='vanish-on-load' style='font-size: 15px; font-family: Normal; font-weight: 400; color: #fff; text-align: center; margin-top: 20px;'>Sign in to: BALLARATHS</div>
 				<div class='vanish-on-load clickable-text' style='font-size: 15px; margin-top: 20px;'>How do I sign in to another domain?</div>
-	
-				<div style='font-size: 30px; text-align: center; color: #fff; font-family: Normal; font-weight: 400;'id='loading-icon'>
-					Loading
+				
+				<div id='sign-in-loading'>
+					<img src='assets/loading.gif'>
+					<div>
+						Loading
+					</div>
 				</div>
 				
-				
+				<div id='incorrect-password'>
+					<p>The password is incorrect. Try again</p>
+					<button onclick='resetLogin()'> OK </button>
+				</div>
 			</div>
 		</div>
 	</body>

@@ -29,29 +29,26 @@ function attemptLogin() {
 	$('.vanish-on-load').each(function(index,elem) {
 		elem.style.display = 'none'
 	})
-	let number = 0
+
+	$('#sign-in-loading')[0].style.display = 'flex'
 	
-
-	$('#loading-icon')[0].style.display = 'block'
-	loadingFunc = setInterval(function() {
-		let num = new Date()
-		number += 1
-		$('#loading-icon')[0].innerHTML = 'Loading' + '.'.repeat(number%4)
-	}, 200)
-
 	var randomTimeout = Math.floor((Math.random() * 5000) + 3000)
 	console.log(randomTimeout)
 
 	setTimeout(function() {
-		clearInterval(loadingFunc)
-
-		$('.vanish-on-load').each(function(index,elem) {
-			elem.style.display = ''
-		})
-
-		$('#loading-icon')[0].style.display = 'none'
-
+		$('#sign-in-loading')[0].style.display = 'none'
+		$('#incorrect-password')[0].style.display = 'grid'
 	}, randomTimeout)
+}
+
+function resetLogin() {
+	$('#incorrect-password')[0].style.display = 'none'
+
+	$('.vanish-on-load').each(function(index,elem) {
+		elem.style.display = ''
+	})
+
+	$('#password')[0].value = ''
 }
 
 function openLogin() {
